@@ -15,7 +15,7 @@
   <input type="text" name="FirstName" placeholder="FirstName">
   <input type="text" name="LastName" placeholder="LastName"><br>
   Email Id:<br>
-  <input type="text" name="Email Id">
+  <input type="email" name="Email Id">
   <br>
   Work Experience(In Years):<br>
   <input type="text" name="WorkExp">
@@ -31,10 +31,16 @@
   <input type="text" name="CGPA" >
   <br>
   Percentage:<br>
-  <input type="text" name="Percentage">
+  <input type="text" name="Percentage" placeholder="Use your uni multiplier">
   <br>
   Field of Study:<br>
-  <input type="text" name="WorkExp">
+
+  <select>
+  <option value="nothing">Select the course </option>
+  <option value="meng">M.Eng</option>
+  
+</select>
+ 
   <br>
   <input type="submit" value="Submit">
 </form>
@@ -48,7 +54,7 @@ The application requirements for the universities you are eligible for will show
  </section>
  
  <section>
- <div>
+ <div class="divp">
  	 <label>Details of Courses available</label><br>
  	 <textarea rows="15" cols="100" readonly>
 
@@ -56,12 +62,12 @@ The application requirements for the universities you are eligible for will show
  	 </div>
  </section>
 
- <section>
- 	<label>Details of Courses available</label><br>
+ <section class="divp">
+ 	<label>Connect to people</label><br>
  	 <textarea rows="15" cols="100" readonly>
  	 </textarea>
  </section>
- <section>
+ <section class="divp">
  	<label>Any further queries, feel free to ask </label><br>
  	 <textarea type="submit" name="Query" value="Send" rows="5" cols="100"></textarea> <br>
  	 <input type="submit" name="Send">

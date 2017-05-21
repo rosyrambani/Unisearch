@@ -7,10 +7,21 @@ textarea,
 body * {
   font-family: Trebuchet MS, Helvetica, sans-serif;
   box-sizing: border-box;
+  margin: 5px 0 5px 0;
+  padding: 6px;
+  border-radius: 4px;
+}
+input{
+	    border: 1px solid rgba(51, 204, 30, 0.67);
+}
+div{
+	margin: 20px;
+}
+label{
+line-height: 3;
 }
 body {
-	background-image: url("paper.gif");
-	background-color: #cccccc;
+	background-color: rgba(204, 204, 204, 0.11);
   /*background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);*/
   /*background-image: linear-gradient(top, #f2f2f2, #e6e6e6);*/
 }
@@ -36,4 +47,8 @@ body {
 }
 .middle{
 text-align: center;
+}
+.divp{
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
