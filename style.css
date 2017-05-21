@@ -1,0 +1,39 @@
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+body,
+input,
+select,
+textarea,
+body * {
+  font-family: Trebuchet MS, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+	background-image: url("paper.gif");
+	background-color: #cccccc;
+  /*background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);*/
+  /*background-image: linear-gradient(top, #f2f2f2, #e6e6e6);*/
+}
+.input{
+	padding: 5px !important;
+}
+.inline{
+	text-align: center;
+}
+.details {
+	align-content: center;
+}
+.inline div{
+	text-align: left;
+	display:inline-block;
+	border: 1px solid;
+    padding: 10px;
+    margin: 10px;
+    border-color: rgba(0, 0, 0, 0.26);
+}
+.uniresult{
+	width: 200px;
+}
+.middle{
+text-align: center;
+}
