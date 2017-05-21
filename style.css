@@ -52,3 +52,9 @@ text-align: center;
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
+table,td{
+	margin: 0 auto;
+	border: 1px solid;
+    padding: 10px;
+    border-color: rgba(0, 0, 0, 0.26);
+}
