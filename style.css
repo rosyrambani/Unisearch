@@ -1,33 +1,21 @@
 
 @import url(http://fonts.googleapis.com/css?family=Roboto);
-body,
-input,
-select,
-textarea,
-body * {
+body{
   font-family: Trebuchet MS, Helvetica, sans-serif;
   box-sizing: border-box;
-  margin: 5px 0 5px 0;
-  padding: 6px;
+  margin:  0;
+  padding: 0px;
   border-radius: 4px;
 }
-input{
-	    border: 1px solid rgba(51, 204, 30, 0.67);
-}
-div{
-	margin: 20px;
-}
-label{
-line-height: 3;
-}
+
+
+
 body {
 	background-color: rgba(204, 204, 204, 0.11);
   /*background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);*/
   /*background-image: linear-gradient(top, #f2f2f2, #e6e6e6);*/
 }
-.input{
-	padding: 5px !important;
-}
+
 .inline{
 	text-align: center;
 }
@@ -35,12 +23,7 @@ body {
 	align-content: center;
 }
 .inline div{
-	text-align: left;
 	display:inline-block;
-	border: 1px solid;
-    padding: 10px;
-    margin: 10px;
-    border-color: rgba(0, 0, 0, 0.26);
 }
 .uniresult{
 	width: 200px;
@@ -48,13 +31,29 @@ body {
 .middle{
 text-align: center;
 }
-.divp{
-	padding-bottom: 10px;
-	padding-top: 10px;
-}
+
 table,td{
 	margin: 0 auto;
 	border: 1px solid;
     padding: 10px;
     border-color: rgba(0, 0, 0, 0.26);
 }
+.card{
+	width: 400px !important;
+}
+.btn{
+	width: 60% !important;
+}
+.row{
+	margin: 0 !important;
+	width: 90%
+}
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+

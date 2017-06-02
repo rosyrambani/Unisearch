@@ -19,7 +19,7 @@ Echo "</table>";
 <script>
 $(document).ready(function(){
 $('.delete').click(function(){
-	console.log("invoker");
+	
 var invoker= $(this).attr('value') ;
 var line = $(this).parent().parent();
  $.ajax({
