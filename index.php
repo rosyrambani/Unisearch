@@ -66,8 +66,9 @@ Echo "
   </div>
   <div class='row'>
   <div class='input-field col s12'>
-  <label for='experience'>Work Experience:</label>
+  <i class='material-icons prefix'>work</i>
   <input type='text' name='experience' id='experience'>
+  <label for='experience'>Work Experience:</label>
   <br>
  </div>
   </div>
@@ -76,8 +77,9 @@ Echo "
   <input type='hidden' name= 'sex'>
   <div class='row'>
   <div class='input-field col s12'>
-  <label for='country'>Country:</label>
+  <i class='material-icons prefix'>location_on</i>
   <input type='text' id='country' name='country' style='text-transform:capitalize'>
+  <label for='country'>Country:</label>
   </div>
   </div>
   <input type='hidden' name= 'language' style='text-transform:capitalize'>
