@@ -41,33 +41,36 @@ Echo "
   </nav>
 <div class='middle' style='margin-top:100px;'>
  <section class='inline'>
+ <div id='thankyoumessage1' class='card thankyoumessage' style='display:none;'>
+ Thank you for filling this info. Please provide a little more information about your academic interest.
+ </div>
  <div class='card'>
  	<form id='form1'>
   <div class='row'>
   <div class='input-field col s12'>
   <i class='material-icons prefix'>account_circle</i>
-  <input type='text' id='firstName' name='firstName' style='text-transform:capitalize'>
+  <input type='text' id='firstName' name='firstName' style='text-transform:capitalize' required>
   <label for='firstName'>First Name: </label> 
   </div>
   </div>
   <div class='row'>
   <div class='input-field col s12'>
   <i class='material-icons prefix'>account_circle</i>
-  <input type='text' id='lastName' name='lastName' style='text-transform:capitalize'>
+  <input type='text' id='lastName' name='lastName' style='text-transform:capitalize' >
   <label for='lastName'>Last Name: </label>
   </div>
   </div>
   <div class='row'>
   <div class='input-field col s12'>
   <i class='material-icons prefix'>email</i>
-  <input type='email' name='email' id='email'>
+  <input type='email' name='email' id='email' required>
   <label for='email'>Email Id:</label>
   </div>
   </div>
   <div class='row'>
   <div class='input-field col s12'>
   <i class='material-icons prefix'>work</i>
-  <input type='text' name='experience' id='experience'>
+  <input type='text' name='experience' id='experience' required>
   <label for='experience'>Work Experience:</label>
   <br>
  </div>
@@ -78,13 +81,16 @@ Echo "
   <div class='row'>
   <div class='input-field col s12'>
   <i class='material-icons prefix'>location_on</i>
-  <input type='text' id='country' name='country' style='text-transform:capitalize'>
+  <input type='text' id='country' name='country' style='text-transform:capitalize' required>
   <label for='country'>Country:</label>
   </div>
   </div>
   <input type='hidden' name= 'language' style='text-transform:capitalize'>
-  
-   <input class='btn waves-effect waves-light amber darken-4' type='submit' name='submit1' id='submit1'>
+  <div id='sendform'>
+   <button class='btn waves-effect waves-light' type='submit' name='action'>Submit
+    <i class='material-icons right'>send</i>
+  </button>
+  </div>
         
 
 </form> 
@@ -182,34 +188,24 @@ The application requirements for the universities you are eligible for will show
 $(document).ready(function(){
 $('#form1').submit(function(e){
   e.preventDefault();
-  alert("heyyyyyy");
-console.log( $( this ).serializeArray() );
- //  var firstName = document.getElementById("firstName").value;
- //  var lastName = document.getElementById("lastName").value;
- //  var email = document.getElementById("email").value;
- //  var experience = document.getElementById("experience").value;
- //  var country = document.getElementById("country").value;
- //  event.preventDefault();
+  $('#sendform').html('<div class="preloader-wrapper small active">    <div class="spinner-layer spinner-green-only">      <div class="circle-clipper left">        <div class="circle"></div>      </div><div class="gap-patch">        <div class="circle"></div>      </div><div class="circle-clipper right">        <div class="circle"></div>      </div>    </div>  </div>');
+var userinfo= $( this ).serializeArray() ;
   
- // $.ajax({
- //        url: "userinfo.php",
- //        type: "POST",
- //         dataType: "json",
- //       // data:{type:"student",firstName:"firstName", lastName:lastName, email:email, experience:experience, country:country},
- //          contentType : "application/json",
-
- //      success: function() {
-
-
-
- //        alert("Record Added Successfully");
- //        },
+ $.ajax({
+        url: "userinfo.php",
+        type: "POST",
+        data: userinfo,
+       
+      success: function() {
+        $('#form1').delay(2000).fadeOut();
+        $('#thankyoumessage1').delay(1999).show();
+        },
         
         
- //        error: function() {
- //          alert("There was an error. Try again please!");
- //        }
- //    });
+        error: function() {
+          alert("There was an error. Try again please!");
+        }
+    });
 });
 });
 </script>

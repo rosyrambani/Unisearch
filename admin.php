@@ -3,7 +3,7 @@ include 'settings.php';
 $sql= "SELECT * FROM student ORDER BY firstname";
 $result = mysqli_query($conn, $sql);
 
-Echo "<table>
+Echo "<table id='admintable'>
 <tr style='color: indianred;'><td>Id</td><td>First Name</td><td>Last Name</td><td>Email</td><td>Experience</td><td>Country</td><td>Action</td></tr>";
 if (mysqli_num_rows($result) > 0) {
 while($row = mysqli_fetch_assoc($result)){
@@ -36,3 +36,12 @@ var line = $(this).parent().parent();
 });
 });
 </script>
+<style type="text/css">
+    #admintable{
+        width: 50%;
+    }
+    #admintable td{
+        border: 1px solid grey;
+        padding: 15px;
+    }
+</style>
