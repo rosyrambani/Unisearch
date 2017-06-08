@@ -36,6 +36,15 @@ var line = $(this).parent().parent();
 });
 });
 </script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('select').material_select();
+  });
+    
+</script>
+
+       
+
 <style type="text/css">
     #admintable{
         width: 50%;

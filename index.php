@@ -17,7 +17,7 @@ mysqli_query($conn, $sql);
  Echo "<!DOCTYPE html>
 <html>
 <head>
-<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+
 
 	<title>Check your eligibility for canadian universities</title>
    
@@ -26,7 +26,8 @@ mysqli_query($conn, $sql);
 <body>";
 
 Echo "<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js'></script>
-<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>";
+<script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+<script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>";
 
 Echo "
 <nav>
@@ -44,9 +45,13 @@ Echo "
  <div id='thankyoumessage1' class='card thankyoumessage' style='display:none;'>
  Thank you for filling this info. Please provide a little more information about your academic interest.
  </div>
- <div class='card'>
+
+  <div class='card'>
+    
  	<form id='form1'>
   <div class='row'>
+
+ 
   <div class='input-field col s12'>
   <i class='material-icons prefix'>account_circle</i>
   <input type='text' id='firstName' name='firstName' style='text-transform:capitalize' required>
@@ -95,24 +100,42 @@ Echo "
 
 </form> 
 </div>
-<div class='card'>
-<p>Click the submit button to show available results.</p>
 
-<form id='form2'>
-<fieldset disabled />
+<div class='container'>
+  <div class='row'>
+<div class='col-md-6'>
+<div class='card'>
+
+
+<form id='form2' >
+<!-- <fieldset disabled /> -->
+<p>Click the submit button to show available results.</p>
   CGPA:<br>
   <input type='text' name='CGPA' >
   <br>
   Percentage:<br>
-  <input type='text' name='Percentage' placeholder='Use your uni multiplier'><br>";
+  <input type='text' name='Percentage' placeholder='Use your uni multiplier'><br>
+  Field of Study:<br>
+  <div class='row'>
+  <div class='input-field col s12 m6'>
+  <div class='select-wrapper'>
+  <span class='caret'>▼</span>
+  <input type='text' class='select-dropdown' readonly='true' data-activates='select-options-274a5784-d394-4f54-11f2-76cd75963661' value='Choose your option'>
 
-  Echo "Field of Study:<br>
+  <ul id='select-options-274a5784-d394-4f54-11f2-76cd75963661' class='dropdown-content select-dropdown' style='width: 358px; position: absolute; top: 0px; left: 0px; opacity: 1; display: none;'>
+  <li class='disabled'><span>Choose your option</span></li><li class=''><span>Option 1</span></li><li class=''><span>Option 2</span></li><li class=''><span>Option 3</span></li></ul>
+  <select class='initialized'>
+                  <option value='' disabled='' selected=''>Choose your option</option>
+                  <option value='1'>Option 1</option>
+                  <option value='2'>Option 2</option>
+                  <option value='3'>Option 3</option>
+                </select>
+  </div>
+  </div>
+  </div>
+  </div>
 
-  <select>
-  <option value='nothing'>Select the course </option>
-  <option value='meng'>M.Eng</option>
-  
-</select>
+ 
  
   <br>
   <button class='btn waves-effect waves-light' type='submit' name='action' id='submit2'>Submit
@@ -120,14 +143,21 @@ Echo "
   
 </form>
 
-</div> 
+</div>
+</div>
+
+<div class='col-md-6'>
 <div class='card'>
 <label>Requirements </label><br>
 	<textarea rows='10' cols='50' readonly>
 The application requirements for the universities you are eligible for will show up here.
 </textarea>
 </div>
+</div>
+
  </section>
+ </div>
+  </div>
  
  <section>
  <div class='card'>
@@ -199,6 +229,7 @@ var userinfo= $( this ).serializeArray() ;
       success: function() {
         $('#form1').delay(2000).fadeOut();
         $('#thankyoumessage1').delay(1999).show();
+        $('#form2').delay(5000).show();
         },
         
         
