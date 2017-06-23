@@ -23,7 +23,7 @@
   )";
 
   mysqli_query($conn, $sql);
-   mysqli_query($conn, $sql2);
+  mysqli_query($conn, $sql2);
 
   
   Echo '<!DOCTYPE html>
@@ -43,16 +43,22 @@
     </ul>
   </div>
 </nav>
-<div class="middle" style="margin-top:100px;">
-  <section class="inline">
-    <div id="thankyoumessage1" class="card thankyoumessage" style="display:none;">
+
+ 
+  
+    <div id="thankyoumessage1" class="card center-block" style="display:none;">
       Thank you for filling this info. Please provide a little more information about your academic interest.
     </div>
+    
+
+ 
+  
+
     <!--Sign Up form -->
     <div class="container">
       <div class="row">
         
-        <div class="card center-block">
+        <div class="card center-block" style="margin-top:50px;">
           
           <form id="form1">
             <h5>Sign Up Form</h5>
@@ -112,7 +118,7 @@
       
       <div class="row">
         <div class="col-md-6">
-          <div class="card">
+          <div class="card center-block" style="display:none;" >
             <form id="form2" >
               <fieldset id="myFieldsetForm2" >
                 <h5>Click submit to show available results.</h5>
@@ -147,7 +153,7 @@
                   <div class="input-field col s12">
                     <i class="material-icons prefix">school</i>
                     <select id="study" name="study" required>
-                      <option value="" disabled="" selected="">Select your choice of study</option>
+                      <option value="" disabled="" selected="">Select your field of study</option>
                       <option value="M.Eng">M.Eng</option>
                       <option value="MAC">MAC</option>
                       <option value="M.Sc">M.Sc</option>
@@ -166,24 +172,32 @@
               </form>
             </div>
           </div>
-          <!--Requirements -->
+          <!--Recommendations -->
           
-          <div class="col-md-6">
-            <div class="card">
-              <label>Requirements </label><br>
-              <textarea rows="10" cols="50" readonly>
-              The application requirements for the universities you are eligible for will show up here.
-              </textarea>
+          <div class="col-md-6" id="recommend" style="display:none;">
+            <div class="card center-block"  style="margin-top:50px;">
+              <label> Recommendations </label><br>
+              <p id="recommendations">
+              List of recommended universities according to your credentials:
+              <br> 
+              <br>
+              <br>
+
+              Disclaimer: We do not have tie-ups with these universities.
+              The suggestions are purly based on student experience.
+              </p>
             </div>
           </div>
         </div>
-      </section>
     </div>
+
+         
+        
     
     <!--Courses Available -->
     
     <section>
-      <div class="card">
+      <div class="card" id="coursedetails" style="display:none;">
         <label>Details of Courses available</label><br>
         <textarea rows="15" cols="100" readonly>
         </textarea>
@@ -191,7 +205,7 @@
     </section>
     <!--Connect to People -->
     <section>
-      <div class="card">
+      <div class="card" id="connect" style="display:none;">
         <label>Connect to people</label><br>
         <textarea rows="15" cols="100" readonly>
         </textarea>
@@ -199,8 +213,8 @@
     </section>
     <!--Queries -->
     <section>
-      <div class="card">
-        <label>Any further queries, feel free to ask </label><br>
+      <div class="card center-block" id="query">
+        <label>Any queries, feel free to ask </label><br>
         <textarea name="Query" rows="5" cols="100"></textarea> <br>
         <div class="sendform" id="sendform3">
           <button class="btn waves-effect waves-light" type="submit" name="action" id="submit3">Send
@@ -244,6 +258,7 @@
         $(document).ready(function()
         {
           $("#myFieldsetForm2").prop( "disabled", true );
+          
           $("select").material_select();
           $('.caret').html("");
           $("#form1").submit(function(e)
@@ -260,9 +275,12 @@
                  
                   success: function() 
                   {
-                    $("#form1").delay(2000).fadeOut();
+                    $("#form1").delay(2000).parent().fadeOut();
                     $("#thankyoumessage1").delay(1999).show();
+
+                    $("#form2").delay(2000).parent().show();
                     $("#myFieldsetForm2").prop( "disabled", false );
+                    
                     $("select").material_select();
                     $('.caret').html("");
                   },
@@ -272,6 +290,7 @@
                   }
                 });
              });
+               
 
              $("#university").autocomplete({
               data: {
@@ -331,8 +350,14 @@
                  
                   success: function() 
                   {
-                    console.log(fieldofstudy);
-                    alert("data added successfully")
+                    $("#form2").delay(2000).parent().fadeOut();
+                    
+                    $("#recommend").delay(2000).show();
+
+                    
+                    $("select").material_select();
+                    
+                   
                   },
                   error: function() 
                   {

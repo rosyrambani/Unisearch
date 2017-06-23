@@ -18,9 +18,12 @@ table,td{
     border-color: rgba(0, 0, 0, 0.26);
 }
 textarea{
-  height: 300px;
+  height: auto;
+
 }
 
+.row{
+  margin-bottom: auto;
 }
 .thankyoumessage{
   padding: 20px;
@@ -29,17 +32,24 @@ textarea{
   left: 5%;
 }
 
+label{
+  font-size: 15px;
+}
+
 .sendform{
       width: 500px;
     text-align: center;
+    padding-top: 20px;
 }
 .form{
 	width: 500px;
+
 }
 .card{
 	width: 550px;
-	padding: 10px;
+	padding: 30px;
 	align-items: center;
+  margin-top: 50px;
 }
 .btn{
 	align-self: center !important;
