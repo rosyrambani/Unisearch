@@ -214,8 +214,9 @@
     <!--Queries -->
     <section>
       <div class="card center-block" id="query">
-        <label>Any queries, feel free to ask </label><br>
-        <textarea name="Query" rows="5" cols="100"></textarea> <br>
+        <label for="query">Any queries, feel free to ask </label>
+        <textarea name="query" id="query" class="materialize-textarea"></textarea>
+        
         <div class="sendform" id="sendform3">
           <button class="btn waves-effect waves-light" type="submit" name="action" id="submit3">Send
           <i class="material-icons right">send</i>
@@ -224,6 +225,9 @@
         
       </div>
     </section>
+
+      
+
     <!-- Footer Section -->
     <footer class="page-footer">
       <div class="container">
