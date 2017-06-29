@@ -45,10 +45,27 @@ label{
 	width: 500px;
 
 }
+.row .col.m5{
+  width: 50%;
+  margin: 0 auto;
+
+}
+
+td{
+  height: 65px;
+  text-align: center;
+}
+th{
+  text-align: center;
+}
+p {
+    margin: 0px 10px 20px;
+}
 .card{
 	width: 350px;
 	padding: 30px;
 	align-items: center;
+  margin-top: 50px;
 
   margin-bottom: 50px;
 }

@@ -28,10 +28,10 @@
   
   Echo '<!DOCTYPE html>
 <html>
-  <head>
-    <title>Check your eligibility for canadian universities</title>
-  </head>
-  <body> <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<head>
+  <title>Check your eligibility for canadian universities</title>
+</head>
+<body> <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> <nav>
   <div class="nav-wrapper">
@@ -44,217 +44,445 @@
   </div>
 </nav>
 
- 
-  
-    <div id="thankyoumessage1" class="card center-block" style="display:none;">
-      Thank you for filling this info. Please provide a little more information about your academic interest.
+
+
+
+
+<div class="row center-block">
+  <div class="col s12 m5">
+    <div class="card-panel teal lighten-1" id="panel1">
+      <span class="white-text">Student assistance for education options in Canada to match your skills.
+      </span>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Sign Up form -->
+<div class="container">
+
+ <div class="row">
+  <div class="col-md-4">
+
+
+    <div class="col s12 m5">
+      <div class="card teal lighten-1">
+        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+        </span>
+      </div>
     </div>
     
-
- 
+  </div>
   
-
-    <!--Sign Up form -->
-    <div class="container">
-      <div class="row">
-        
-        <div class="card center-block" style="margin-top:50px;">
-          
-          <form id="form1">
-            <h5>Sign Up Form</h5>
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input type="text" id="firstName" name="firstName" style="text-transform:capitalize" required>
-                <label for="firstName">First Name: </label>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">account_circle</i>
-                <input type="text" id="lastName" name="lastName" style="text-transform:capitalize" >
-                <label for="lastName">Last Name: </label>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">email</i>
-                <input type="email" name="email" id="email" required>
-                <label for="email">Email Id:</label>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">work</i>
-                <input type="text" name="experience" id="experience" required>
-                <label for="experience">Work Experience:</label>
-                
-              </div>
-            </div>
-            <input type="hidden" name= "age">
-            <input type="hidden" name= "sex">
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">location_on</i>
-                <input type="text" id="country" name="country" style="text-transform:capitalize" required>
-                <label for="country">Country:</label>
-              </div>
-            </div>
-            <input type="hidden" name= "language" style="text-transform:capitalize">
-            <div class="sendform" id="sendform1">
-              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-              <i class="material-icons right">send</i>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+  
+  <div class="col-md-4">
+    <div class="card" style="margin-top:50px;">
       
-      <!--University Selector Form -->
-      
-      
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card center-block" style="display:none;" >
-            <form id="form2" >
-              <fieldset id="myFieldsetForm2" >
-                <h5>Click submit to show available results.</h5>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix">grade</i>
-                    <input type="text" id="grade" name="grade" required>
-                    <label for="grade">CGPA:</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix">assessment</i>
-                    <input type="text" id="percentage" name="percentage" required>
-                    <label for="percentage">Percentage:</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col s12">
-                    <div class="row">
-                      <div class="input-field col s12">
-                        <i class="material-icons prefix">textsms</i>
-                        <input type="text" id="university" name="university" class="autocomplete" required>
-                        <label for="university">Enter the university of your choice</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                
-                <div class="row">
-                  <div class="input-field col s12">
-                    <i class="material-icons prefix">school</i>
-                    <select id="study" name="study" required>
-                      <option value="" disabled="" selected="">Select your field of study</option>
-                      <option value="M.Eng">M.Eng</option>
-                      <option value="MAC">MAC</option>
-                      <option value="M.Sc">M.Sc</option>
-                    </select>
-                    <label for="study">Field of Study</label>
-                  </div>
-                  
-                </div>
-                
-                <div class="sendform" id="sendform2">
-                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                  <i class="material-icons right">send</i>
-                  </button>
-                </div>
-                </fieldset>
-              </form>
-            </div>
-          </div>
-          <!--Recommendations -->
-          
-          <div class="col-md-6" id="recommend" style="display:none;">
-            <div class="card center-block"  style="margin-top:50px;">
-              <label> Recommendations </label><br>
-              <p id="recommendations">
-              List of recommended universities according to your credentials:
-              <br> 
-              <br>
-              <br>
-
-              Disclaimer: We do not have tie-ups with these universities.
-              The suggestions are purly based on student experience.
-              </p>
-            </div>
+      <form id="form1">
+        <h5>Sign Up Form</h5>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" id="firstName" name="firstName" style="text-transform:capitalize" required>
+            <label for="firstName">First Name: </label>
           </div>
         </div>
-    </div>
-
-         
         
-    
-    <!--Courses Available -->
-    
-    <section>
-      <div class="card" id="coursedetails" style="display:none;">
-        <label>Details of Courses available</label><br>
-        <textarea rows="15" cols="100" readonly>
-        </textarea>
-      </div>
-    </section>
-    <!--Connect to People -->
-    <section>
-      <div class="card" id="connect" style="display:none;">
-        <label>Connect to people</label><br>
-        <textarea rows="15" cols="100" readonly>
-        </textarea>
-      </div>
-    </section>
-    <!--Queries -->
-    <section>
-      <div class="card center-block" id="query">
-        <label for="query">Any queries, feel free to ask </label>
-        <textarea name="query" id="query" class="materialize-textarea"></textarea>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" id="lastName" name="lastName" style="text-transform:capitalize" >
+            <label for="lastName">Last Name: </label>
+          </div>
+        </div>
         
-        <div class="sendform" id="sendform3">
-          <button class="btn waves-effect waves-light" type="submit" name="action" id="submit3">Send
-          <i class="material-icons right">send</i>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+            <input type="email" name="email" id="email" required>
+            <label for="email">Email Id:</label>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">work</i>
+            <input type="text" name="experience" id="experience" required>
+            <label for="experience">Work Experience:</label>
+            
+          </div>
+        </div>
+        <input type="hidden" name= "age">
+        <input type="hidden" name= "sex">
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">location_on</i>
+            <input type="text" id="country" name="country" style="text-transform:capitalize" required>
+            <label for="country">Country:</label>
+          </div>
+        </div>
+        <input type="hidden" name= "language" style="text-transform:capitalize">
+        <div class="sendform" id="sendform1">
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
           </button>
         </div>
+      </form>
+    </div>
+  
+  
+  
+  <!--University Selector Form -->
+  
+  
+  
+  
+    <div class="card" style="display:none;">
+      <form id="form2" >
+      <h5>Thank you for filling this info. Please provide a little more information about your academic interest.</h5>
+        <fieldset id="myFieldsetForm2" >
         
-      </div>
-    </section>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">grade</i>
+              <input type="text" id="grade" name="grade" required>
+              <label for="grade">CGPA:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">assessment</i>
+              <input type="text" id="percentage" name="percentage" required>
+              <label for="percentage">Percentage:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">textsms</i>
+                  <input type="text" id="university" name="university" class="autocomplete" required>
+                  <label for="university">Enter the university of your choice</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">school</i>
+              <select id="study" name="study" required>
+                <option value="" disabled="" selected="">Select your field of study</option>
+                <option value="M.Eng">M.Eng</option>
+                <option value="MAC">MAC</option>
+                <option value="M.Sc">M.Sc</option>
+              </select>
+              <label for="study">Field of Study</label>
+            </div>
+            
+          </div>
+          
+          <div class="sendform" id="sendform2">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
 
+  <!--Recommendations -->
+
+  
+  <div class="col-md-4" id="recommend">
+    <div class="card"  style="margin-top:50px;">
+      <label>Top Recommendations </label><br>
+      <p id="recommendations">
+        List of recommended universities according to your credentials:<br>
+        <br>
+        *University of Windsor<br>
+        *University of Concordia<br>
+        *University of Carleton<br>
+        *University of Winnipeg<br>
+        <br>
+        <br>
+        Disclaimer: We do not have tie-ups with these universities.
+        The suggestions are purely based on student experience.
+      </p>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+
+
+
+<div class="container">
+
+  <p>Click Apply Now for admission details</p> 
+  <div class="row">
+  <div class="col-md-4">           
+  <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>University</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Acadia University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       
+      </tr>
+      <tr>
+        <td>Brock University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Cape Breton University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Capilano University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Carleton University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Concordia University of Edmonton</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Dalhousie University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Fairleigh Dickinson University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Kwantlen Polytechnic University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Ontario Institute of Technology</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
       
+      
+    </tbody>
+  </table>
+  </div>
 
-    <!-- Footer Section -->
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Canadian Universities Search Engine</h5>
-            <p class="grey-text text-lighten-4">Content</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Work</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Services</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
+<div class="col-md-4">           
+  <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>University</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MacEwan University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Mcmaster University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Memorial University of Newfoundland</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       
+      </tr>
+      <tr>
+        <td>Mount Allison University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Prince Edward Island</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Regina</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Saskatchewan</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of the Fraser Valley</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Victoria</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Mount Allison University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Windsor</td>
+        <td><a href="http://www.uwindsor.ca/registrar/admissions" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+    </tbody>
+  </table>
+  </div>
+<div class="col-md-4">           
+  <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>University</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Royal Roads University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Saskatchewan Polytechnic</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Winnipeg</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>Thompson Rivers University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>University of Winnipeg</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>Trent University</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>University of New Brunswick</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>University Canada West</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>University of Lethbridge</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>University of Manitoba</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>University of Waterloo</td>
+        <td><a href="http://education.acadiau.ca/Admission_Information.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+</div>
+</div>
+
+
+<!--Courses Available -->
+
+<section>
+  <div class="card" id="coursedetails" style="display:none;">
+    <label>Details of Courses available</label><br>
+    <textarea rows="15" cols="100" readonly>
+    </textarea>
+  </div>
+</section>
+<!--Connect to People -->
+<section>
+  <div class="card" id="connect" style="display:none;">
+    <label>Connect to people</label><br>
+    <textarea rows="15" cols="100" readonly>2
+    </textarea>
+  </div>
+</section>
+<!--Queries -->
+<section>
+  <div class="card center-block" id="query" style="display:none;">
+    <label for="query">Any queries, feel free to ask </label>
+    <textarea name="query" id="query" class="materialize-textarea"></textarea>
+    
+    <div class="sendform" id="sendform3">
+      <button class="btn waves-effect waves-light" type="submit" name="action" id="submit3">Send
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+    
+  </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Canadian Universities Search Engine</h5>
+        <p class="grey-text text-lighten-4">Content</p>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2017 Copyright
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Work</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Services</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+        </ul>
       </div>
-    </footer>
-  </body>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2017 Copyright
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
+</body>
 </html>';
       ?>
 
@@ -280,7 +508,7 @@
                   success: function() 
                   {
                     $("#form1").delay(2000).parent().fadeOut();
-                    $("#thankyoumessage1").delay(1999).show();
+                    // $("#thankyoumessage1").delay(1999).show();
 
                     $("#form2").delay(2000).parent().show();
                     $("#myFieldsetForm2").prop( "disabled", false );
