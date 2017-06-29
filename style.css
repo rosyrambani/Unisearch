@@ -36,21 +36,35 @@ label{
   font-size: 15px;
 }
 
+.page-footer{
+  padding-top: 60px;
+}
+.card-panel{
+  margin-top: 20px;
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+
 .sendform{
       width: 300px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 0px;
 }
 .form{
 	width: 500px;
 
 }
-.row .col.m5{
+.center-block{
   width: 50%;
-  margin: 0 auto;
+  text-align: center;
 
 }
-
+.container{
+margin-top: -30px;
+}
 td{
   height: 65px;
   text-align: center;
@@ -59,13 +73,15 @@ th{
   text-align: center;
 }
 p {
-    margin: 0px 10px 20px;
+    margin: 30px 10px 20px;
+    size: 10px;
 }
 .card{
 	width: 350px;
 	padding: 30px;
 	align-items: center;
   margin-top: 50px;
+  height: 450px;
 
   margin-bottom: 50px;
 }
