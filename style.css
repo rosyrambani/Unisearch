@@ -6,7 +6,7 @@ body{
   margin:  0;
   padding: 0px;
   border-radius: 4px;
-  background-color: #eee !important;
+  background-color: #d7cec7 !important;
 }
 
 
@@ -41,7 +41,15 @@ label{
 }
 .card-panel{
   margin-top: 20px;
+  border-radius: 30px;
 }
+.search{
+  z-index: 1000 !important;
+}
+.divsearch{
+  z-index: 1000 !important;
+}
+
 
 a:focus, a:hover {
     color: #23527c;
@@ -65,12 +73,18 @@ a:focus, a:hover {
 .container{
 margin-top: -30px;
 }
-td{
-  height: 65px;
+.table>tbody>tr>td{
+  height: 53px;
   text-align: center;
+  vertical-align: middle;
+}
+.table{
+  font-size: 12px;
 }
 th{
   text-align: center;
+  font-size: 15px;
+  
 }
 p {
     margin: 30px 10px 20px;
@@ -82,12 +96,27 @@ p {
 	align-items: center;
   margin-top: 50px;
   height: 450px;
+  border-radius: 10px;
 
   margin-bottom: 50px;
+
 }
 .btn{
 	align-self: center !important;
+  font-size: 13px;
+  /*background-color: #6d7993;*/
 }
 .input-field label{
 	font-size: 1.5rem !important;
 }
+.table>thead>tr>th {
+  width: 70%;
+  }
+
+nav{
+  background-color: ##26a69a;
+}
+.page-footer{
+  background-color: ##26a69a;
+}
+

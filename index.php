@@ -33,13 +33,20 @@
 </head>
 <body> <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> <nav>
-  <div class="nav-wrapper">
-    <a href="#" class="brand-logo">&nbsp;&nbsp;UniSearch</a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> 
+ 
+
+ <nav>
+  <div class="nav-wrapper" id="header">
+    <a href="#" class="brand-logo">&nbsp;&nbsp;Engineering Mentor</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="">Blog</a></li>
-      <li><a href="">Store</a></li>
-      <li><a href="">About</a></li>
+      
+      <div class="input-field" id="divsearch">
+          <input id="search" type="search">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      
     </ul>
   </div>
 </nav>
@@ -50,8 +57,8 @@
 
 <div class="row">
   <div class="center-block" >
-    <div class="card-panel teal lighten-1" id="panel1">
-      <span class="white-text">Student assistance for education options in Canada to match your skills.
+    <div class="card-panel" id="panel1">
+      <span>Student assistance for education options in Canada to match your skills.
       </span>
     </div>
   </div>
@@ -66,13 +73,12 @@
   <div class="col-md-4">
 
 
-    <div class="col s12 m5">
-      <div class="card teal lighten-1">
-        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+    
+      <div class="card left-align">
+        <span>Engineering Mentor is a website for guidance and resolution to all your queries about studying engineering in Canada. Our team is comprised of people who came to Canada as students and have now established themselves as successful engineers. Who can be a better mentor for you than a person who has passed that struggling phase with dedication and hard work?  We aim at assisting students to study in the best universities in Canada, and create great career opportunities for them.
         </span>
       </div>
-    </div>
+    
     
   </div>
   
@@ -194,35 +200,36 @@
       </form>
     </div>
 
-    <div class="col s12 m5" style="display:none;" id="details2">
-      <div class="card teal lighten-1">
-        <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+    
+    <div class="card" id="recommend" style="display:none;">
+      <label>Top Recommendations </label><br>
+      <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">University of Windsor</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">University of Carleton</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">University of Ottawa</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+    </div>
+  
+  </div>
+
+
+    <div class="col-md-4" id="details2">
+      <div class="card">
+        <span>News Feed 
         </span>
       </div>
     </div>
-  </div>
-
-  <!--Recommendations -->
-
   
-  <div class="col-md-4" id="recommend">
-    <div class="card"  style="margin-top:50px;">
-      <label>Top Recommendations </label><br>
-      <p id="recommendations">
-        List of recommended universities according to your credentials:<br>
-        <br>
-        *University of Windsor<br>
-        *University of Concordia<br>
-        *University of Carleton<br>
-        *University of Winnipeg<br>
-        <br>
-        <br>
-        Disclaimer: We do not have tie-ups with these universities.
-        The suggestions are purely based on student experience.
-      </p>
-    </div>
-  </div>
+  
   
 </div>
 </div>
@@ -232,56 +239,142 @@
 
 <div class="container">
 
-  <p class="center-block">Click Apply Now for admission details</p> 
+  <p class="center-block">Top Universities in Canada. Click Apply Now for admission details</p> 
   <div class="row">
   <div class="col-md-4">           
   <table class="table table-striped table-responsive table-bordered">
     <thead>
       <tr>
-        <th>University</th>
+        <th>Ontario</th>
         <th>Apply</th>
-        
+
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Acadia University</td>
-        <td><a href="http://www2.acadiau.ca/international.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-       
-      </tr>
+      
       <tr>
         <td>Brock University</td>
         <td><a href="https://brocku.ca/admissions/international/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
-      <tr>
-        <td>Cape Breton University</td>
-        <td><a href="https://www.cbu.ca/come-to-cbu/admissions/admission-requirements/international-admissions/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-        
-      </tr>
-      <tr>
-        <td>Capilano University</td>
-        <td><a href="https://www.capilanou.ca/international/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-        
-      </tr>
+      
+     
       <tr>
         <td>Carleton University</td>
         <td><a href="https://graduate.carleton.ca/international/admission-requirements/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
+      
       <tr>
-        <td>Concordia University of Edmonton</td>
-        <td><a href="http://concordia.ab.ca/international/international-students/admissions/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        <td>Mcmaster University</td>
+        <td><a href="http://future.mcmaster.ca/admission/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+     <tr>
+        <td>University of Windsor</td>
+        <td><a href="http://www.uwindsor.ca/intl/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      
+      <tr>
+        <td>Trent University</td>
+        <td><a href="https://www.trentu.ca/futurestudents/graduate-students" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+
+      <tr>
+        <td>University of Ontario Institute of Tech</td>
+        <td><a href="http://admissions.uoit.ca/applicant-information/international-applicants.php" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
       <tr>
-        <td>Dalhousie University</td>
-        <td><a href="https://www.dal.ca/admissions/international_students/admissions.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        <td>University of Waterloo</td>
+        <td><a href="https://uwaterloo.ca/discover-graduate-studies/admission-requirements" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
       <tr>
-        <td>Fairleigh Dickinson University</td>
-        <td><a href="http://view2.fdu.edu/vancouver-campus/admissions/undergraduate-admissions/how-to-apply-international-students/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        <td>Queens University</td>
+        <td><a href="http://www.queensu.ca/apply/international" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Toronto</td>
+        <td><a href="https://www.sgs.utoronto.ca/international/Pages/Check-Minimum-Requirements.aspx"_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Western Ontario</td>
+        <td><a href="http://www.grad.uwo.ca/prospective_students/international/index.html"_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>York University</td>
+        <td><a href="http://gradstudies.yorku.ca/prospective-students/international-students/"_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Ryerson University</td>
+        <td><a href="http://www.ryerson.ca/graduate/admissions/apply/international-applicants/"_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Guelph</td>
+        <td><a href="https://www.uoguelph.ca/graduatestudies/future/international"_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Ottawa</td>
+        <td><a href="https://www.uottawa.ca/graduate-studies/international/study-uottawa/admission-equivalencies"_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Wilfrid Laurier University</td>
+        <td><a href="https://www.wlu.ca/admissions-toolkits/graduate-admissions-toolkit/index.html"_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>Lakehead University</td>
+        <td><a href="https://www.lakeheadu.ca/academics/graduate/applying/masters"_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      
+      
+      
+
+      
+    </tbody>
+  </table>
+  <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>Prince Edward Island</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>University of Prince Edward Island</td>
+        <td><a href="http://www.upei.ca/programsandcourses/graduate-admissions" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+
+     </tbody>
+      </table>
+
+  </div>
+
+<div class="col-md-4">           
+  
+  <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>British Columbia</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>University of British Columbia</td>
+        <td><a href="https://www.grad.ubc.ca/prospective-students/application-admission/minimum-academic-requirements-international-credentials" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
       <tr>
@@ -290,58 +383,22 @@
         
       </tr>
       <tr>
-        <td>University of Ontario Institute of Technology</td>
-        <td><a href="http://admissions.uoit.ca/applicant-information/international-applicants.php" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        <td>Fairleigh Dickinson University</td>
+        <td><a href="http://view2.fdu.edu/vancouver-campus/admissions/undergraduate-admissions/how-to-apply-international-students/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
-      
-      
-    </tbody>
-  </table>
-  </div>
-
-<div class="col-md-4">           
-  <table class="table table-striped table-responsive table-bordered">
-    <thead>
-      <tr>
-        <th>University</th>
-        <th>Apply</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>MacEwan University</td>
-        <td><a href="http://www.macewan.ca/wcm/International/MacEwanInternational/index.htm" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+     <tr>
+        <td>Royal Roads University</td>
+        <td><a href="http://international.royalroads.ca/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
       <tr>
-        <td>Mcmaster University</td>
-        <td><a href="http://future.mcmaster.ca/admission/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-        
-      </tr>
-      <tr>
-        <td>Memorial University of Newfoundland</td>
-        <td><a href="http://www.mun.ca/become/graduate/programs/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-       
-      </tr>
-      <tr>
-        <td>Mount Allison University</td>
-        <td><a href="https://www.mta.ca/intl/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-        
-      </tr>
-      <tr>
-        <td>University of Prince Edward Island</td>
-        <td><a href="http://www.upei.ca/programsandcourses/graduate-admissions" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-        
-      </tr>
-      <tr>
-        <td>University of Regina</td>
-        <td><a href="https://www.uregina.ca/gradstudies/future-students/international-students/index.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-        
-      </tr>
-      <tr>
-        <td>University of Saskatchewan</td>
-        <td><a href="http://explore.usask.ca/international.php" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        <td>University Canada West</td>
+        <td><a href="http://www.uwo.ca/international/students/index.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>Capilano University</td>
+        <td><a href="https://www.capilanou.ca/international/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
       <tr>
@@ -354,73 +411,216 @@
         <td><a href="http://www.uvic.ca/future-students/international/index.php" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
-      
       <tr>
-        <td>University of Windsor</td>
-        <td><a href="http://www.uwindsor.ca/intl/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        <td>Simon Fraser University</td>
+        <td><a href="http://www.sfu.ca/content/sfu/main/programs/for-international-students.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
+      <tr>
+        <td>University of Northern British Columbia</td>
+        <td><a href="http://www.unbc.ca/international-studies-graduate-program" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>Thompson Rivers University</td>
+        <td><a href="http://www.tru.ca/campus/admissions/international/application-instructions-graduate-masters-programs.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+
     </tbody>
   </table>
-  </div>
-<div class="col-md-4">           
+  
   <table class="table table-striped table-responsive table-bordered">
     <thead>
       <tr>
-        <th>University</th>
+        <th>Qubec</th>
         <th>Apply</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Royal Roads University</td>
-        <td><a href="http://international.royalroads.ca/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        <td>McGill University</td>
+        <td><a href="http://www.mcgill.ca/gradapplicants/apply/prepare/requirements" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       
+      </tr>
+      <tr>
+        <td>Concordia University</td>
+        <td><a href="https://www.concordia.ca/admissions/graduate/international.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       
+      </tr>
+
+     </tbody>
+      </table>
+
+      <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>Nova Scotia</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dalhousie University</td>
+        <td><a href="https://www.dal.ca/admissions/international_students/admissions.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
+      <tr>
+        <td>Acadia University</td>
+        <td><a href="http://www2.acadiau.ca/international.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       
+      </tr>
+      <tr>
+        <td>Cape Breton University</td>
+        <td><a href="https://www.cbu.ca/come-to-cbu/admissions/admission-requirements/international-admissions/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+       
+
+     </tbody>
+      </table>
+
+
+
+
+  </div>
+<div class="col-md-4"> 
+<table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>Alberta</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MacEwan University</td>
+        <td><a href="http://www.macewan.ca/wcm/International/MacEwanInternational/index.htm" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+     
+      <tr>
+        <td>Concordia University of Edmonton</td>
+        <td><a href="http://concordia.ab.ca/international/international-students/admissions/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Lethbridge</td>
+        <td><a href="http://www.uleth.ca/graduate-studies/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+
+       <tr>
+        <td>University of Alberta</td>
+        <td><a href="https://www.ualberta.ca/graduate-studies/prospective-students/international-admissions-protocol" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+        <tr>
+        <td>University of Calgary</td>
+        <td><a href="https://www.ucalgary.ca/future-students/graduate/international" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       
+      
+      
+      
+    </tbody>
+  </table>          
+  <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>Saskatchewan</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      
       <tr>
         <td>Saskatchewan Polytechnic</td>
         <td><a href="http://saskpolytech.ca/programs-and-courses/international/programs.aspx" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
         
       </tr>
       <tr>
+        <td>University of Regina</td>
+        <td><a href="https://www.uregina.ca/gradstudies/future-students/international-students/index.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+      <tr>
+        <td>University of Saskatchewan</td>
+        <td><a href="http://explore.usask.ca/international.php" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+       </tbody>
+        </table>
+      <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>Manitoba</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
         <td>University of Winnipeg</td>
         <td><a href="http://www.uwinnipeg.ca/future-student/intl-students.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
        </tr>
        
-        
-      
-       <tr>
-        <td>Trent University</td>
-        <td><a href="https://www.trentu.ca/futurestudents/graduate-students" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-       </tr>
-       <tr>
-        <td>University of New Brunswick</td>
-        <td><a href="http://www.unb.ca//gradstudies/admissions/international.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-       </tr>
-       <tr>
-        <td>University Canada West</td>
-        <td><a href="http://www.uwo.ca/international/students/index.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-       </tr>
-       <tr>
-        <td>University of Lethbridge</td>
-        <td><a href="http://www.uleth.ca/graduate-studies/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-       </tr>
+       
+       
        <tr>
         <td>University of Manitoba</td>
         <td><a href="http://umanitoba.ca/graduate_studies/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
        </tr>
-       <tr>
-        <td>University of Waterloo</td>
-        <td><a href="https://uwaterloo.ca/discover-graduate-studies/admission-requirements" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-        
-      </tr>
-      <tr>
-        <td>Queens University</td>
-        <td><a href="http://www.queensu.ca/apply/international" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
-        
-      </tr>
+       
+      
     </tbody>
   </table>
+
+  <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>New Brunswick</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+
+      <tr>
+        <td>University of New Brunswick</td>
+        <td><a href="http://www.unb.ca//gradstudies/admissions/international.html" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       </tr>
+       <tr>
+        <td>Mount Allison University</td>
+        <td><a href="https://www.mta.ca/intl/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+
+      <tr>
+        <td>St.Thomas University</td>
+        <td><a href="https://www.stthomas.edu/admissions/graduate/collegesschools/schoolofengineering/"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+        
+      </tr>
+
+    </tbody>
+      </table>
+       <table class="table table-striped table-responsive table-bordered">
+    <thead>
+      <tr>
+        <th>Newfoundland</th>
+        <th>Apply</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Memorial University of Newfoundland</td>
+        <td><a href="http://www.mun.ca/become/graduate/programs/" target="_blank"><button class="btn waves-effect waves-light">Apply Now</button></a></td>
+       
+      </tr>
+
+     </tbody>
+      </table>
+      
+       
+      
+
   </div>
 
 </div>
@@ -495,7 +695,7 @@
         $(document).ready(function()
         {
           $("#myFieldsetForm2").prop( "disabled", true );
-          
+          $('.collapsible').collapsible();
           $("select").material_select();
           $('.caret').html("");
           $("#form1").submit(function(e)
@@ -573,6 +773,51 @@
               minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
             });
 
+              $("#search").autocomplete({
+              data: {
+                "Acadia University": null,
+                "Brock University": null,
+                "Cape Breton University": null,
+                "Capilano University": null,
+                "Carleton University": null,
+                "Concordia University of Edmonton": null,
+                "Dalhousie University": null,
+                "Fairleigh Dickinson University": null,
+                "Fairleigh Dickinson University": null,
+                "Kwantlen Polytechnic University": null,
+                "MacEwan University": null,
+                "Mcmaster University": null,
+                "Memorial University of Newfoundland": null,
+                "Mount Allison University": null,
+                "Royal Roads University": null,
+                "Saskatchewan Polytechnic": null,
+                "University of Winnipeg": null,
+                "Thompson Rivers University": null,
+                "Trent University": null,
+                "University of New Brunswick": null,
+                "University Canada West": null,
+                "University of Lethbridge": null,
+                "University of Manitoba": null,
+                "University of Ontario Institute of Technology": null,
+                "University of Prince Edward Island": null,
+                "University of Regina": null,
+                "University of Saskatchewan": null,
+                "University of the Fraser Valley": null,
+                "University of Victoria": null,
+                "University of Waterloo": null,
+                "University of Windsor": null,
+                "Queens University": null,
+
+              },
+              limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+              onAutocomplete: function(val) {
+                // Callback function when value is autcompleted.
+                
+              },
+              minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+            });
+
+
 
         $("#form2").submit(function(e)
           {
@@ -591,7 +836,7 @@
                     $("#form2").delay(2000).parent().fadeOut();
                   
                     
-                    $("#details2").delay(2000).show();
+                    $("#recommend").delay(2000).show();
 
                     
                     $("select").material_select();
